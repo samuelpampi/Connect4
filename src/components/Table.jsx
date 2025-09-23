@@ -1,12 +1,18 @@
+import { Column } from "./Column";
 import "./components.css"
-import { Hole } from "./Hole";
 
-export function Table( {board, updateBoard} ){
+export function Table( {board, updateBoard, lastMove} ){
     return(
         <div className="table">
             {
-                board.map((_, index) => (
-                    <Hole key={index} index={index} updateBoard={updateBoard} value={board[index]}/>
+                board.map((_, index) => ( //Pintamos las columnas
+                    <Column 
+                        key={index} 
+                        colIndex={index} 
+                        updateBoard={updateBoard} 
+                        rows={board[index]} 
+                        lastMove={lastMove}
+                    /> 
                 ))
             }
         </div>

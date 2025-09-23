@@ -2,10 +2,21 @@
     background-color: #11487C;
     border-radius: 10px;
     padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    grid-template-rows: repeat(6, 1fr);
+    display: flex;
+    flex-wrap: wrap;    
     gap: 10px;
+}
+
+.table-column{
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.table-column:hover{
+    cursor: pointer;
+    background-color: #0d396650;
 }
 
 .game{
@@ -22,11 +33,33 @@
 }
 
 .hole{
+    margin: 5px;
     width: 80px;
     height: 80px;
     background-color: #18274B;
     border-radius: 50%;
 }
+
+/*************** Animacion caida de la ficha ***************/
+@keyframes drop {
+    0% {
+        transform: translateY(-600px);
+        opacity: 0.7;
+    }
+    80% {
+        transform: translateY(10px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.hole.drop-animation {
+    animation: drop 0.4s cubic-bezier(.68,-0.55,.27, 1.2);
+}
+/***********************************************************/
 
 .selected-red{
     background-color: #F65656;

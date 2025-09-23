@@ -1,14 +1,12 @@
 import "./components.css"
 
 
-export function Hole({ updateBoard, value, index}){
-    const className = `hole ${value === null ? '' : value === 'red' ? 'selected-red' : 'selected-yellow'}`;
-    
-    const handleClick = () =>{ 
-        updateBoard(index);
-    }
+export function Hole({value, isNew}){
+
+    console.log(isNew);
+    const className = `hole ${value === null ? '' : value === 'red' ? 'selected-red' : 'selected-yellow'}${isNew ? ' drop-animation' : ''}`;
 
     return(
-        <div className={className} onClick={handleClick}/>
+        <div className={className}/>
     );
 }
