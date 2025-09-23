@@ -15,11 +15,25 @@
     margin-top: 40px;
 }
 
+.game-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .hole{
     width: 80px;
     height: 80px;
     background-color: #18274B;
     border-radius: 50%;
+}
+
+.selected-red{
+    background-color: #F65656;
+}
+
+.selected-yellow{
+    background-color: #FFCC00;
 }
 
 .player{
@@ -31,7 +45,7 @@
     font-size: 32px;
     font-weight: 800;
     padding: 20px;
-    gap: 60px
+    gap: 60px;
 }
 
 .player-cirle-red{
@@ -48,10 +62,20 @@
     border-radius: 50%;
 }
 
+.player-name{
+    padding: 10px 20px;
+    border-radius: 30px;
+}
+
 .turn-yellow{
     color: #FFCC00;
 }
 
 .turn-red{
     color: #F65656;
+}
+
+.selected{
+    color: #18274B;
+    background-color: #A7DDFF;
 }

@@ -1,12 +1,12 @@
 import "./components.css"
 import { Hole } from "./Hole";
 
-export function Table(){
+export function Table( {board, updateBoard} ){
     return(
         <div className="table">
             {
-                Array(42).fill().map((_, index) => (
-                    <Hole key={index} />
+                board.map((_, index) => (
+                    <Hole key={index} index={index} updateBoard={updateBoard} value={board[index]}/>
                 ))
             }
         </div>
