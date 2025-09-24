@@ -176,3 +176,75 @@
     font-size: 32px;
     font-weight: 600;
 }
+
+/* ====== Responsive ====== */
+@media (max-width: 768px) {
+    .game {
+        flex-direction: column;
+        gap: 40px; /* antes 100px */
+    }
+
+    .player {
+        width: 90%; /* antes 300px */
+        font-size: 24px; /* antes 32px */
+        gap: 30px; /* antes 60px */
+    }
+
+    .player-cirle-red,
+    .player-cirle-yellow {
+        width: 70px;
+        height: 70px; /* antes 100px */
+    }
+
+    .hole {
+        width: 50px;  /* antes 80px */
+        height: 50px;
+        margin: 3px;
+    }
+
+    .table {
+        justify-content: center;
+        gap: 6px; /* menos espacio entre columnas */
+    }
+
+    .turn-info {
+        font-size: 24px; /* antes 32px */
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .modal-winner {
+        width: 90%;
+        height: auto;
+        padding: 20px;
+    }
+
+    .player-win-text {
+        font-size: 24px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .player {
+        font-size: 20px;
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .player-cirle-red,
+    .player-cirle-yellow {
+        width: 50px;
+        height: 50px;
+    }
+
+    .hole {
+        width: 40px;
+        height: 40px;
+    }
+
+    .resetButon {
+        padding: 5px 10px;
+        font-size: 14px;
+    }
+}
