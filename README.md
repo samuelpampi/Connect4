@@ -9,8 +9,6 @@ Incluye animaciones de caída de fichas, detección automática de ganador y un 
 
 ## 🚀 Demo
 
-👉 *(Aquí puedes añadir una captura de pantalla o un gif mostrando la jugabilidad)*  
-
 ![Gameplay](./public/img/connect4-gif.gif)
 
 ---
@@ -47,10 +45,10 @@ Incluye animaciones de caída de fichas, detección automática de ganador y un 
    http://localhost:4173/
 
 ## 🛠️ Tecnologías usadas
-React con Hooks (useState, useEffect, custom hooks)
-CSS3 con Flexbox y Grid.
-JavaScript (ES6+).
-Vite como bundler.
+- React con Hooks (useState, useEffect, custom hooks)
+- CSS3 con Flexbox y Grid.
+- JavaScript (ES6+).
+- Vite como bundler.
 
 ## 📂 Estructura del proyecto
 
