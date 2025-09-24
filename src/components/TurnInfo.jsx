@@ -1,12 +1,8 @@
+import { getTurnInfo } from "../lib/turns"
+
 export function TurnInfo({turn}) {
 
-    let turnClass = "turn-red"
-    let turnText = "Red Player's turn"
-
-    if(turn === "yellow"){
-        turnClass = "turn-yellow"
-        turnText = "Yellow Player's turn"
-    }
+    const { turnClass, turnText} = getTurnInfo(turn);
 
     return(
         <p className={"turn-info " + turnClass} >{turnText}</p>
