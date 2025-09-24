@@ -23,13 +23,32 @@
     display: flex;
     gap: 100px;
     align-items: center;
-    margin-top: 40px;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .game-container{
+    position: relative;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
+}
+
+.resetButon{
+    font-family: inherit;
+    background: #18274B;
+    color: #A7DDFF;
+    border: 1px solid #A7DDFF;
+    border-radius: 5px;
+    padding: 5px 15px;
+    transition: all 0.2s ease-in-out;
+    cursor: pointer;
+}
+
+.resetButon:hover{
+    color: #18274B;
+    background: #A7DDFF;
 }
 
 .hole{
@@ -79,6 +98,7 @@
 }
 
 .player{
+    width: 300px;
     color: #A7DDFF;
     display: flex;
     flex-direction: column;
@@ -120,4 +140,39 @@
 .selected{
     color: #18274B;
     background-color: #A7DDFF;
+}
+
+/* Estilos de la ventana modal para el Winner*/
+
+.modal-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #0b122267;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+}
+
+.modal-winner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 400px;
+    height: 500px;
+    border: 1px solid #A7DDFF;
+    background-color: #18274B;
+    border-radius: 10px;   
+    gap: 30px;
+}
+
+.player-win-text{
+    margin-bottom: 40px;
+    font-size: 32px;
+    font-weight: 600;
 }
