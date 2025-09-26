@@ -5,7 +5,7 @@ import { Game } from "./components/Game";
 export function App(){
     return(
         <main>
-            <img src="/img/conect4_logo.png" alt="Logo de Connect4" style={{height:"80px"}}/>
+            <img className="logo" src="/img/conect4_logo.png" alt="Logo de Connect4" style={{height:"80px"}}/>
             <Game />
         </main>
     );

@@ -104,7 +104,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: space-around;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: 800;
     padding: 20px;
     gap: 60px;
@@ -223,15 +223,44 @@
         font-size: 24px;
         text-align: center;
     }
+
+    main{
+        height: 100%;
+    }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 430px) {
+    .game {
+        display: grid;
+        grid-template-columns: 1fr 1fr;  /* dos columnas */
+        grid-template-rows: auto auto;   /* dos filas */
+        gap: 10px;
+        justify-items: center;
+    }
+
+    .game .player:first-child {
+        grid-column: 1;  /* rojo en la primera columna */
+        grid-row: 1;
+    }
+
+    .game .player:last-child {
+        grid-column: 2;  /* amarillo en la segunda columna */
+        grid-row: 1;
+    }
+
+    .game .table {
+        grid-column: 1 / span 2;  /* tablero ocupa las dos columnas */
+        grid-row: 2;
+        gap: 5px
+    }
+
     .player {
-        font-size: 20px;
+        width: 150px;
+        font-size: 12px;
         padding: 10px;
         gap: 20px;
     }
-
+    
     .player-cirle-red,
     .player-cirle-yellow {
         width: 50px;
@@ -246,5 +275,20 @@
     .resetButon {
         padding: 5px 10px;
         font-size: 14px;
+    }
+
+    main{
+        height: 100vh;
+    }
+}
+
+@media (max-width: 375px) {
+    .hole {
+        width: 35px;
+        height: 35px;
+    }
+
+    .logo{
+        height: 50px;
     }
 }
